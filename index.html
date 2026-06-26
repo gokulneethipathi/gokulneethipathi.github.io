@@ -100,7 +100,17 @@ nav a {
 }
 nav a:hover { color: var(--accent); }
 nav a.active { color: var(--accent); box-shadow: var(--nm-pressed-sm); }
-@media (max-width: 720px) { nav .nav-extra { display: none; } }
+@media (max-width: 720px) {
+  nav { left: 18px; transform: none; padding: 6px; gap: 2px; max-width: calc(100% - 90px); overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  nav::-webkit-scrollbar { display: none; }
+  nav a { padding: 8px 13px; font-size: 12px; white-space: nowrap; }
+  nav .nav-extra { display: none; }
+  .toggle { top: 16px; right: 16px; width: 48px; height: 48px; font-size: 19px; }
+  .hero { justify-content: flex-start; padding-top: 104px; }
+  section { padding: 64px 22px; }
+  .about-card { padding: 32px 26px; }
+  .contact .card { padding: 44px 26px; }
+}
 
 /* ============ HERO ============ */
 .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding-top: 120px; }
@@ -161,7 +171,7 @@ nav a.active { color: var(--accent); box-shadow: var(--nm-pressed-sm); }
 .skill-group h3 .ico { color: var(--accent); }
 .chips { display: flex; flex-wrap: wrap; gap: 9px; }
 .chip {
-  font-family: 'JetBrains Mono', monospace; font-size: 12px; padding: 7px 13px; border-radius: 10px;
+  font-family: 'Inter', sans-serif; font-weight: 500; font-size: 12.5px; padding: 7px 14px; border-radius: 10px;
   box-shadow: var(--nm-pressed-sm); color: var(--text-soft);
 }
 
@@ -184,7 +194,7 @@ nav a.active { color: var(--accent); box-shadow: var(--nm-pressed-sm); }
 .proj h3 { font-size: 1.35rem; margin: 12px 0; }
 .proj p { color: var(--text-soft); font-size: 0.95rem; flex-grow: 1; }
 .proj .stack { display: flex; flex-wrap: wrap; gap: 7px; margin: 18px 0; }
-.proj .stack span { font-family: 'JetBrains Mono', monospace; font-size: 11px; padding: 5px 10px; border-radius: 8px; box-shadow: var(--nm-pressed-sm); color: var(--text-soft); }
+.proj .stack span { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 11.5px; padding: 5px 11px; border-radius: 8px; box-shadow: var(--nm-pressed-sm); color: var(--text-soft); }
 .proj .links { display: flex; gap: 12px; margin-top: auto; }
 .proj .links a { font-size: 13px; font-weight: 600; color: var(--accent); display: inline-flex; align-items: center; gap: 6px; }
 .proj .links a:hover { text-decoration: underline; }
@@ -280,7 +290,7 @@ footer .accent { color: var(--accent); }
 
 <!-- ABOUT -->
 <section id="about">
-  <span class="eyebrow reveal">// about</span>
+  <span class="eyebrow reveal">about</span>
   <h2 class="section-title reveal">From raw events to governed insight</h2>
   <div class="card about-card reveal">
     <p>I'm a <strong>Senior Data Engineer with 5+ years</strong> architecting cloud-native data platforms on Azure and AWS. My focus is production-grade ETL/ELT built on Apache Spark, PySpark, Databricks, Snowflake, and Azure Data Factory, with deep work in Medallion Architecture, dimensional modeling, and lakehouse design.</p>
@@ -292,7 +302,7 @@ footer .accent { color: var(--accent); }
 
 <!-- SKILLS -->
 <section id="skills">
-  <span class="eyebrow reveal">// stack</span>
+  <span class="eyebrow reveal">stack</span>
   <h2 class="section-title reveal">Tools I build with</h2>
   <div class="skills-grid">
     <div class="card skill-group reveal">
@@ -336,7 +346,7 @@ footer .accent { color: var(--accent); }
 
 <!-- EXPERIENCE -->
 <section id="experience">
-  <span class="eyebrow reveal">// experience</span>
+  <span class="eyebrow reveal">experience</span>
   <h2 class="section-title reveal">Where I've shipped</h2>
   <div class="timeline">
     <div class="card job reveal">
@@ -373,7 +383,7 @@ footer .accent { color: var(--accent); }
 
 <!-- PROJECTS (placeholder content — swap in your real GitHub repos) -->
 <section id="projects">
-  <span class="eyebrow reveal">// projects</span>
+  <span class="eyebrow reveal">projects</span>
   <h2 class="section-title reveal">Featured projects</h2>
   <p class="section-intro reveal">A few things I've built. Swap these cards for your real repositories, screenshots, and demo links.</p>
   <div class="proj-grid">
@@ -403,7 +413,7 @@ footer .accent { color: var(--accent); }
 
 <!-- CERTIFICATIONS (placeholder — mark each as earned or in-progress) -->
 <section id="certs">
-  <span class="eyebrow reveal">// certifications</span>
+  <span class="eyebrow reveal">certifications</span>
   <h2 class="section-title reveal">Certifications</h2>
   <p class="section-intro reveal">Update these to reflect what you hold or are pursuing.</p>
   <div class="cert-grid">
@@ -416,7 +426,7 @@ footer .accent { color: var(--accent); }
 
 <!-- PUBLICATIONS -->
 <section id="publications">
-  <span class="eyebrow reveal">// research</span>
+  <span class="eyebrow reveal">research</span>
   <h2 class="section-title reveal">Publications</h2>
   <div class="card pub reveal">
     <h3>Real-Time Thought Controlled Action for Paralytic Patient using EEG</h3>
@@ -433,7 +443,7 @@ footer .accent { color: var(--accent); }
 <!-- CONTACT -->
 <section id="contact" class="contact">
   <div class="card reveal">
-    <span class="eyebrow">// contact</span>
+    <span class="eyebrow">contact</span>
     <h2>Let's build something<br>that scales.</h2>
     <p>Open to senior data engineering roles and interesting pipeline problems. The fastest way to reach me is email.</p>
     <div class="cta-row">
